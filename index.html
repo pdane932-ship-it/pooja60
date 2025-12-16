@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pooja Dane | Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{
+    --bg:#f4f6fb;
+    --text:#000;
+    --card:#fff;
+}
+.dark{
+    --bg:#121212;
+    --text:#fff;
+    --card:#1e1e1e;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* Header */
+.hero{
+    background:linear-gradient(90deg,#7b5cff,#3b82f6);
+    color:white;
+    padding:40px;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.photo{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:3px solid white;
+}
+
+.tag{
+    background:rgba(255,255,255,0.25);
+    padding:5px 12px;
+    border-radius:15px;
+    font-size:12px;
+    margin-right:5px;
+}
+
+/* Navbar */
+.navbar{
+    background:var(--card);
+    padding:12px;
+    text-align:center;
+}
+
+.navbar a{
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+    color:var(--text);
+}
+
+.navbar button{
+    padding:6px 10px;
+    border:none;
+    cursor:pointer;
+}
+
+/* Sections */
+section{
+    padding:30px;
+    animation:fadeIn 1s ease-in-out;
+}
+
+h2{
+    margin-bottom:15px;
+    color:#3b82f6;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:var(--card);
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 15px;
+    background:#3b82f6;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .profile{
+        flex-direction:column;
+        text-align:center;
+    }
+    .navbar a{
+        display:block;
+        margin:8px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="hero">
+    <div class="profile">
+        <img src="profile.jpg" class="photo">
+        <div>
+            <h1>Pooja Nivrutti Dane</h1>
+            <p>Electrical Engineering Student</p><br>
+            <span class="tag">Student</span>
+            <span class="tag">Fresher</span>
+        </div>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+    <button onclick="toggleDark()">🌙</button>
+</div>
+
+<!-- HOME -->
+<section id="home">
+<h2><i class="fa fa-house"></i> Home</h2>
+<p>I am a first-year Electrical Engineering student learning computer fundamentals, programming basics and engineering concepts.</p>
+<a href="resume.pdf" class="btn" download>📄 Download Resume</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2><i class="fa fa-user"></i> About Me</h2>
+<div class="cards">
+<div class="card"><h3>Name</h3><p>Pooja Nivrutti Dane</p></div>
+<div class="card"><h3>Branch</h3><p>Electrical Engineering</p></div>
+<div class="card"><h3>College</h3><p>Sanjivani Academy, Kopargaon</p></div>
+<div class="card"><h3>Status</h3><p>Fresher</p></div>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2><i class="fa fa-graduation-cap"></i> Education</h2>
+<div class="cards">
+<div class="card">
+<h3>B.E – Electrical Engineering</h3>
+<p>Sanjivani Academy, Kopargaon</p>
+</div>
+<div class="card">
+<h3>Skills</h3>
+<p>HTML, CSS, Computer Fundamentals, Basics of Programming</p>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2><i class="fa fa-diagram-project"></i> Projects</h2>
+<div class="cards">
+<div class="card"><h3>Portfolio Website</h3><p>HTML & CSS based personal website.</p></div>
+
+
+
+<div class="card"><h3>Electrical Mini Projects</h3><p>Basic learning projects.</p></div>
+</div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+<h2><i class="fa fa-certificate"></i> Certificates</h2>
+<div class="cards">
+<div class="card"><p>Computer Fundamentals Certificate</p></div>
+<div class="card"><p>HTML & CSS Workshop</p></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2><i class="fa fa-envelope"></i> Contact</h2>
+<div class="cards">
+<div class="card"><p>Email: pooja.dane@example.com</p></div>
+<div class="card"><p>Location: Kopargaon, Maharashtra</p></div>
+</div>
+</section>
+
+<script>
+function toggleDark(){
+    document.body.classList.toggle("dark");
+}
+</script>
+</body>
+</html>
